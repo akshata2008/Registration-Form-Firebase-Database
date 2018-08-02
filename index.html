@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      #span_reg{
+        /*border:1px solid black;*/
+        width:20px;
+        height:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+
+      <form class="main_form" autocomplete="off">
+        <h2>Registration Form</h2><br>
+        <label>Registration No.</label><span id="span_reg"></span><br>
+        <input class = "box" id="reg_num" type="text" placeholder="110115001" required><br>
+
+        <label>First Name</label><br>
+        <input class = "box" id="fname" type="text" placeholder="Anuj"><br>
+
+        <label>Last Name</label><br>
+        <input class = "box" id="lname" type="text" placeholder="Soorya"><br>
+
+        <label>Gender</label><br>
+        <table class="radio_class" required>
+          <tr>
+              <td class="table_data" width="9%">
+                <label class="radio_container">
+                <input name="radio" type="radio">
+                <span class="radiomark"></span>
+              </label>
+              </td>
+              <td class="table_text" width="43%">
+                <label class="radio_container">
+                Male
+              </label>
+              </td>
+              <td class="table_data" width="9%">
+                <label class="radio_container">
+                <input name="radio" type="radio">
+                <span class="radiomark"></span>
+              </label>
+              </td>
+              <td class="table_text" width="43%">
+                <label class="radio_container">
+                Female
+              </label>
+              </td>
+          </tr>
+        </table>
+        <br>
+        <label>Phone No.</label><br>
+        <input class = "box" id="phone_num" type="text" placeholder="918933367" ><br>
+
+        <label>Email</label><br>
+        <input class = "box" id="email" type="text" placeholder="anuj.soorya@gmail.com" ><br>
+
+        <label>Branch</label><br>
+        <input class = "box" id="branch" type="text" placeholder="Instrumentation and Control Engineering"><br>
+
+        <label>College Name</label><br>
+        <input class = "box" id="cname" type="text" placeholder="National Institute of Technology, Tiruchirapalli"><br>
+
+        <label>Place</label><br>
+        <input class = "box" id="city" type="text" placeholder="Trichy"><br>
+
+        <label>Accomodation (if needed)</label><br>
+        <table class="radio_class2">
+          <tr>
+              <td class="table_data2" width="9%">
+                <label class="radio_container2">
+                <input name="radio2" type="radio">
+                <span class="radiomark2"></span>
+              </label>
+              </td>
+              <td class="table_text2" width="43%">
+                <label class="radio_container2">
+                Yes
+              </label>
+              </td>
+              <td class="table_data2" width="9%">
+                <label class="radio_container2">
+                <input name="radio2" type="radio">
+                <span class="radiomark2"></span>
+              </label>
+              </td>
+              <td class="table_text2" width="43%">
+                <label class="radio_container2">
+                No
+              </label>
+              </td>
+          </tr>
+        </table>
+
+        <label>If yes, select the accomodation</label><br>
+        <div class="dropdown">
+          <select>
+            <option value="0">Select Accomodation</option>
+            <option value="1">Opal-Building 1</option>
+            <option value="2"></option>
+            <option value="3"></option>
+          </select><br>
+        </div>
+        <label>Workshops </label><br>
+                <table>
+                  <tr>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        Yes
+                      </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        No
+                        </label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        Yes
+                      </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        No
+                        </label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        Yes
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        No
+                        </label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                        <label class="checkbox_container">
+                        <input type="checkbox" class="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="checkbox_container">
+                        Yes
+                        </label>
+                      </td>
+                    </tr>
+                </table>
+
+        <label>Events</label><br>
+        <table>
+          <tr>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                Yes
+              </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                No
+                </label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                Yes
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                No
+                </label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                Yes
+              </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                No
+                </label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                Yes
+              </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <label class="checkbox_container">
+                No
+                </label>
+              </td>
+          </tr>
+        </table>
+
+        <br>
+        <button id="btn" onclick = "myFunction()">SUBMIT</button>
+      </form>
+    <div class="footer"></div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCVBkjljkPepo6br1wS7_DKDx0llm_7Rqc",
+      authDomain: "fir-1-a96e9.firebaseapp.com",
+      databaseURL: "https://fir-1-a96e9.firebaseio.com",
+      projectId: "fir-1-a96e9",
+      storageBucket: "fir-1-a96e9.appspot.com",
+      messagingSenderId: "877166335783"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+  /**********************************************************************/
+  //  FORM VALIDATION
+  // function myFunction(){
+  //   var reg, reg_num_err;
+  //
+  //   reg = document.getElementById("reg_num").value;
+  //   window.alert(reg_num);
+  //   if(reg > 110115999 || reg < 110115001)
+  //     reg_num_err = "Invalid registration number";
+  //   document.getElementById("span_reg").innerHTML=reg_num_err;
+  // }
+  //FOR DROPDOWN
+    var x, i, j, selElmnt, a, b, c;
+    /*look for any elements with the class "custom-select":*/
+    x = document.getElementsByClassName("dropdown");
+    for (i = 0; i < x.length; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    /*for each element, create a new DIV that will act as the selected item:*/
+    a = document.createElement("DIV");
+    a.setAttribute("class", "new-select");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+    /*for each element, create a new DIV that will contain the option list:*/
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 0; j < selElmnt.length; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+      /*when an item is clicked, update the original select box,
+      and the selected item:*/
+      var y, i, k, s, h;
+      s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+      h = this.parentNode.previousSibling;
+      for (i = 0; i < s.length; i++) {
+        if (s.options[i].innerHTML == this.innerHTML) {
+          s.selectedIndex = i;
+          h.innerHTML = this.innerHTML;
+          y = this.parentNode.getElementsByClassName("same-as-selected");
+          for (k = 0; k < y.length; k++) {
+            y[k].removeAttribute("class");
+          }
+          this.setAttribute("class", "same-as-selected");
+          break;
+        }
+      }
+      h.click();
+    });
+    b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function(e) {
+    /*when the select box is clicked, close any other select boxes,and
+     open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+          });
+    }
+          function closeAllSelect(elmnt) {
+          /*a function that will close all select boxes in the document,
+          except the current select box:*/
+          var x, y, i, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("new-select");
+          for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i)
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+      }
+          /*if the user clicks anywhere outside the select box,
+          then close all select boxes:*/
+          document.addEventListener("click", closeAllSelect);
+
+
+  </script>
+  <script>
+    //firebase
+
+    var database = firebase.database();
+    var root = database.ref();
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function(){
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
+      var email = document.getElementById('email').value;
+      console.log(fname);
+      var obj = {fname: fname, lname: lname, email: email};
+      root.push(obj);
+    });
+  </script>
+</html>
