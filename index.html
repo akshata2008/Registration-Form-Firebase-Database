@@ -21,17 +21,17 @@
         <input class = "box" id="reg_num" type="text" placeholder="110115001" required><br>
 
         <label>First Name</label><br>
-        <input class = "box" id="fname" type="text" placeholder="Anuj"><br>
+        <input name="fname" class = "box" id="fname" type="text" placeholder="Anuj"><br>
 
         <label>Last Name</label><br>
-        <input class = "box" id="lname" type="text" placeholder="Soorya"><br>
+        <input  value="nope" class = "box" id="lname" type="text" placeholder="Soorya"><br>
 
         <label>Gender</label><br>
-        <table class="radio_class" required>
+        <table class="radio_class" id="gender" required>
           <tr>
               <td class="table_data" width="9%">
                 <label class="radio_container">
-                <input name="radio" type="radio">
+                <input value="Male" name="radio" type="radio" id="male">
                 <span class="radiomark"></span>
               </label>
               </td>
@@ -42,7 +42,7 @@
               </td>
               <td class="table_data" width="9%">
                 <label class="radio_container">
-                <input name="radio" type="radio">
+                <input value="Female" name="radio" type="radio" id="female">
                 <span class="radiomark"></span>
               </label>
               </td>
@@ -66,7 +66,7 @@
         <label>College Name</label><br>
         <input class = "box" id="cname" type="text" placeholder="National Institute of Technology, Tiruchirapalli"><br>
 
-        <label>Place</label><br>
+        <label>City</label><br>
         <input class = "box" id="city" type="text" placeholder="Trichy"><br>
 
         <label>Accomodation (if needed)</label><br>
@@ -296,7 +296,7 @@
         </table>
 
         <br>
-        <button id="btn" onclick = "myFunction()">SUBMIT</button>
+        <button id="btn" type="submit">SUBMIT</button>
       </form>
     <div class="footer"></div>
   </body>
@@ -312,6 +312,7 @@
       messagingSenderId: "877166335783"
     };
     firebase.initializeApp(config);
+    //firebase.database().ref().push({"k": "v"})
   </script>
   <script>
   /**********************************************************************/
@@ -398,22 +399,43 @@
           /*if the user clicks anywhere outside the select box,
           then close all select boxes:*/
           document.addEventListener("click", closeAllSelect);
-
-
   </script>
   <script>
     //firebase
-
     var database = firebase.database();
-    var root = database.ref();
+    var r = database.ref('registrations');// create or refer
+
+    var onComplete = function(error) {
+    if (error)
+        console.log('Operation failed');
+    else 
+        console.log(' Operation completed');
+    };
+    
     var btn = document.getElementById('btn');
     btn.addEventListener('click', function(){
+      var reg_num = document.getElementById('reg_num').value;
       var fname = document.getElementById('fname').value;
       var lname = document.getElementById('lname').value;
-      var email = document.getElementById('email').value;
-      console.log(fname);
-      var obj = {fname: fname, lname: lname, email: email};
-      root.push(obj);
+      // var phone_num = document.getElementById('phone_num').value;
+      // var email = document.getElementById('email').value;
+      // var branch = document.getElementById('branch').value;
+      // var c_name = document.getElementById('c_name').value;
+      // var city = document.getElementById('city').value;
+
+      var gender = document.getElementById('gender').value;
+      if(document.getElementById('male').checked){
+        gender_value = document.getElementById('male').value;
+      }
+      else if(document.getElementById('female').checked){
+        gender_value = document.getElementById('female').value;
+      }
+      
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value/*, phone_num: phone_num, email: email, branch: branch, c_name: c_name, city: city*/};
+      //console.log(obj.reg_num);
+      r.child(obj.reg_num).set(obj, onComplete);
+      
+      //root.push(obj);
     });
   </script>
 </html>
