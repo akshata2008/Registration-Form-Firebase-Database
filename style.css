@@ -81,20 +81,24 @@ table{
   width: 100%;
 }
 td{
-  text-align:left;
+  /*text-align:left;*/
   color: #e55039;
   padding: 0;
+  vertical-align: top;
+  /*border: 1px solid blue;*/
 }
 /*CHECKBOX PROPERTIES*/
-.checkbox_container{
+.checkbox_container{/* the checkbox text*/
     position: relative;
     cursor: pointer;
-    font-size: 16px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     margin:0;
+
+    font-size: 16px;
+    padding-left: 8px;
 }
 /*hide the original checkbox*/
 .checkbox_container input {
@@ -103,11 +107,12 @@ td{
 }
 .checkmark{  /*span tag acting like the new checkbox*/
     position: absolute;
-    top: 9px;
-    left: 20px;
+    top: 0px;
+    /*left: 5px;*/
     height: 15px;
     width: 15px;
     background-color:#FFE082;
+    padding-right: 5px;
 }
 .checkbox_container:hover input ~ .checkmark {
     background-color: #FFB74D;
