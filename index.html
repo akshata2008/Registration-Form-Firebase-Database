@@ -99,9 +99,9 @@
 
         <label>If yes, select the accomodation</label><br>
         <div class="dropdown">
-          <select>
+          <select id="accomodation_info">
             <option value="0">Select Accomodation</option>
-            <option value="1">Opal-Building 1</option>
+            <option value="opal">Opal-Building 1</option>
             <option value="2"></option>
             <option value="3"></option>
           </select><br>
@@ -416,8 +416,9 @@
         acc_value = document.getElementById('acc_n').value;
       }
 
+      var x = document.getElementById("accomodation_info").value;
       
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation: acc_value};
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation_needed: acc_value, accomodation_info: x};
       //console.log(obj.reg_num)
      r.child(obj.reg_num).set(obj, onComplete);
       
