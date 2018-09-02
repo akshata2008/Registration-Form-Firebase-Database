@@ -24,7 +24,7 @@
         <input name="fname" class = "box" id="fname" type="text" placeholder="Anuj"><br>
 
         <label>Last Name</label><br>
-        <input  value="nope" class = "box" id="lname" type="text" placeholder="Soorya"><br>
+        <input  class = "box" id="lname" type="text" placeholder="Soorya"><br>
 
         <label>Gender</label><br>
         <table class="radio_class" id="gender" required>
@@ -70,11 +70,11 @@
         <input class = "box" id="city" type="text" placeholder="Trichy"><br>
 
         <label>Accomodation (if needed)</label><br>
-        <table class="radio_class2">
+        <table class="radio_class2" id="acc">
           <tr>
               <td class="table_data2" width="9%">
                 <label class="radio_container2">
-                <input name="radio2" type="radio">
+                <input value="Yes" name="radio2" type="radio" id="acc_y">
                 <span class="radiomark2"></span>
               </label>
               </td>
@@ -85,7 +85,7 @@
               </td>
               <td class="table_data2" width="9%">
                 <label class="radio_container2">
-                <input name="radio2" type="radio">
+                <input value="No" name="radio2" type="radio" id="acc_n">
                 <span class="radiomark2"></span>
               </label>
               </td>
@@ -107,7 +107,7 @@
           </select><br>
         </div>
         <label>Workshops </label><br>
-                <table>
+                <table id="checkbox_table">
                   <tr>
                       <td>
                         <label class="checkbox_container">
@@ -117,7 +117,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Yes
+                        Segway:General Robotics<br><br>
                       </label>
                       </td>
                       <td>
@@ -128,7 +128,8 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        No
+                        Flappy Bird:Android App <br>
+                        Development<br>
                         </label>
                       </td>
                   </tr>
@@ -141,7 +142,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Yes
+                        R2D2:Voice Controlled <br> Robotics<br>
                       </label>
                       </td>
                       <td>
@@ -152,7 +153,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        No
+                        Chrome Dino:Computer Vision Based Control<br>
                         </label>
                       </td>
                   </tr>
@@ -165,7 +166,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Yes
+                        Stock Market Prediction using Machine Learning
                         </label>
                       </td>
                       <td>
@@ -176,7 +177,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        No
+                        Workshop 1
                         </label>
                       </td>
                   </tr>
@@ -189,7 +190,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Yes
+                        Workshop 2
                         </label>
                       </td>
                     </tr>
@@ -206,7 +207,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Yes
+                Lt Doesn't Exist
               </label>
               </td>
               <td>
@@ -217,7 +218,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                No
+                Robo Race
                 </label>
               </td>
           </tr>
@@ -230,7 +231,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Yes
+                Trail By Tronix
                 </label>
               </td>
               <td>
@@ -241,7 +242,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                No
+                Code Quest
                 </label>
               </td>
           </tr>
@@ -254,7 +255,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Yes
+                Algo Warriors
               </label>
               </td>
               <td>
@@ -265,31 +266,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                No
-                </label>
-              </td>
-          </tr>
-          <tr>
-              <td>
-                <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-              <td>
-                <label class="checkbox_container">
-                Yes
-              </label>
-              </td>
-              <td>
-                <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-              <td>
-                <label class="checkbox_container">
-                No
+                Ideate & Build
                 </label>
               </td>
           </tr>
@@ -417,11 +394,11 @@
       var reg_num = document.getElementById('reg_num').value;
       var fname = document.getElementById('fname').value;
       var lname = document.getElementById('lname').value;
-      // var phone_num = document.getElementById('phone_num').value;
-      // var email = document.getElementById('email').value;
-      // var branch = document.getElementById('branch').value;
-      // var c_name = document.getElementById('c_name').value;
-      // var city = document.getElementById('city').value;
+      var phone_num = document.getElementById('phone_num').value;
+      var email = document.getElementById('email').value;
+      var branch = document.getElementById('branch').value;
+      var cname = document.getElementById('cname').value;
+      var city = document.getElementById('city').value;
 
       var gender = document.getElementById('gender').value;
       if(document.getElementById('male').checked){
@@ -430,12 +407,21 @@
       else if(document.getElementById('female').checked){
         gender_value = document.getElementById('female').value;
       }
+
+      var acc = document.getElementById('acc').value;
+      if(document.getElementById('acc_y').checked){
+        acc_value = document.getElementById('acc_y').value;
+      }
+      else if(document.getElementById('acc_n').checked){
+        acc_value = document.getElementById('acc_n').value;
+      }
+
       
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value/*, phone_num: phone_num, email: email, branch: branch, c_name: c_name, city: city*/};
-      //console.log(obj.reg_num);
-      r.child(obj.reg_num).set(obj, onComplete);
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation: acc_value};
+      //console.log(obj.reg_num)
+     r.child(obj.reg_num).set(obj, onComplete);
       
-      //root.push(obj);
+      //root.push(obj); 
     });
   </script>
 </html>
