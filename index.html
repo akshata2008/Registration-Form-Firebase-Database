@@ -106,12 +106,12 @@
             <option value="3"></option>
           </select><br>
         </div>
-        <label>Workshops </label><br>
+        <label>Workshops</label><br>
                 <table id="checkbox_table">
                   <tr>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="segway">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -122,7 +122,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="flappy_bird">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -136,7 +136,7 @@
                   <tr>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="r2d2">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -147,7 +147,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="chrome_dino">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -160,7 +160,7 @@
                   <tr>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="stock_market">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -171,7 +171,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="workshop1">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -184,7 +184,7 @@
                   <tr>
                       <td>
                         <label class="checkbox_container">
-                        <input type="checkbox" class="checkbox">
+                        <input type="checkbox" class="checkbox" value="yes" id="workshop2">
                         <span class="checkmark"></span>
                         </label>
                       </td>
@@ -416,9 +416,38 @@
         acc_value = document.getElementById('acc_n').value;
       }
 
-      var x = document.getElementById("accomodation_info").value;
-      
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation_needed: acc_value, accomodation_info: x};
+      var info = document.getElementById("accomodation_info").value;
+
+      if(document.getElementById("segway").checked)
+        var a = document.getElementById("segway").value;
+      else 
+        a = "no";
+      if(document.getElementById("flappy_bird").checked)
+        var b = document.getElementById("flappy_bird").value;
+      else
+        b = "no"; 
+      if(document.getElementById("r2d2").checked)
+        var c = document.getElementById("r2d2").value;
+      else 
+        c = "no";
+      if(document.getElementById("chrome_dino").checked)
+        var d = document.getElementById("chrome_dino").value;
+      else 
+        d = "no";
+      if(document.getElementById("stock_market").checked)
+        var e = document.getElementById("stock_market").value;
+      else
+        e = "no";
+      if(document.getElementById("workshop1").checked)
+        var f = document.getElementById("workshop1").value;
+      else
+        f = "no";
+      if(document.getElementById("workshop2").checked)
+        var g = document.getElementById("workshop2").value;
+      else 
+        g = "no";
+
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation_needed: acc_value, accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g};
       //console.log(obj.reg_num)
      r.child(obj.reg_num).set(obj, onComplete);
       
