@@ -31,7 +31,7 @@
           <tr>
               <td class="table_data" width="9%">
                 <label class="radio_container">
-                <input value="Male" name="radio" type="radio" id="male">
+                <input value="Male" type="radio" id="male">
                 <span class="radiomark"></span>
               </label>
               </td>
@@ -42,7 +42,7 @@
               </td>
               <td class="table_data" width="9%">
                 <label class="radio_container">
-                <input value="Female" name="radio" type="radio" id="female">
+                <input value="Female" type="radio" id="female">
                 <span class="radiomark"></span>
               </label>
               </td>
@@ -201,7 +201,7 @@
           <tr>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="lt_doesnt_exist">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -212,7 +212,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="robo_race">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -225,7 +225,7 @@
           <tr>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="trail_by_tronix">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -236,7 +236,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="code_quest">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -249,7 +249,7 @@
           <tr>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="algo_warriors">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -260,7 +260,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                <input type="checkbox" class="checkbox">
+                <input type="checkbox" class="checkbox" value="yes" id="ideat_build">
                 <span class="checkmark"></span>
                 </label>
               </td>
@@ -277,7 +277,7 @@
       </form>
     <div class="footer"></div>
   </body>
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -400,24 +400,25 @@
       var cname = document.getElementById('cname').value;
       var city = document.getElementById('city').value;
 
-      var gender = document.getElementById('gender').value;
-      if(document.getElementById('male').checked){
-        gender_value = document.getElementById('male').value;
-      }
-      else if(document.getElementById('female').checked){
-        gender_value = document.getElementById('female').value;
-      }
+      // var gender = document.getElementById('gender').value;
+      // if(document.getElementById('male').checked){
+      //   gender_value = document.getElementById('male').value;
+      // }
+      // else if(document.getElementById('female').checked){
+      //   gender_value = document.getElementById('female').value;
+      // }
 
-      var acc = document.getElementById('acc').value;
-      if(document.getElementById('acc_y').checked){
-        acc_value = document.getElementById('acc_y').value;
-      }
-      else if(document.getElementById('acc_n').checked){
-        acc_value = document.getElementById('acc_n').value;
-      }
+      // var acc = document.getElementById('acc').value;
+      // if(document.getElementById('acc_y').checked){
+      //   acc_value = document.getElementById('acc_y').value;
+      // }
+      // else if(document.getElementById('acc_n').checked){
+      //   acc_value = document.getElementById('acc_n').value;
+      // }
 
       var info = document.getElementById("accomodation_info").value;
 
+      //WORKSHOPS
       if(document.getElementById("segway").checked)
         var a = document.getElementById("segway").value;
       else 
@@ -447,7 +448,33 @@
       else 
         g = "no";
 
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation_needed: acc_value, accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g};
+      //EVENTS
+      if(document.getElementById("lt_doesnt_exist").checked)
+        var ea = document.getElementById("lt_doesnt_exist").value;
+      else 
+        ea = "no";
+      if(document.getElementById("robo_race").checked)
+        var eb = document.getElementById("robo_race").value;
+      else
+        eb = "no"; 
+      if(document.getElementById("trail_by_tronix").checked)
+        var ec = document.getElementById("trail_by_tronix").value;
+      else 
+        ec = "no";
+      if(document.getElementById("code_quest").checked)
+        var ed = document.getElementById("code_quest").value;
+      else 
+        ed = "no";
+      if(document.getElementById("algo_warriors").checked)
+        var ee = document.getElementById("algo_warriors").value;
+      else
+        ee = "no";
+      if(document.getElementById("ideat_build").checked)
+        var ef = document.getElementById("ideat_build").value;
+      else
+        ef = "no";
+
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, /*gender: gender_value,*/ phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, /*accomodation_needed: acc_value,*/ accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g, z_lt_doesnt_exist: ea, z_robo_race: eb, z_trail_y_tronix: ec, z_code_quest: ed, z_algo_warriors: ee, z_ideat_build: ef};
       //console.log(obj.reg_num)
      r.child(obj.reg_num).set(obj, onComplete);
       
