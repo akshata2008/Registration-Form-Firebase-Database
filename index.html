@@ -401,20 +401,20 @@
       var city = document.getElementById('city').value;
 
       // var gender = document.getElementById('gender').value;
-      // if(document.getElementById('male').checked){
-      //   gender_value = document.getElementById('male').value;
-      // }
-      // else if(document.getElementById('female').checked){
-      //   gender_value = document.getElementById('female').value;
-      // }
+      if(document.getElementById('male').checked){
+        var gender_value = document.getElementById('male').value;
+      }
+      else if(document.getElementById('female').checked){
+        gender_value = document.getElementById('female').value;
+      }
 
       // var acc = document.getElementById('acc').value;
-      // if(document.getElementById('acc_y').checked){
-      //   acc_value = document.getElementById('acc_y').value;
-      // }
-      // else if(document.getElementById('acc_n').checked){
-      //   acc_value = document.getElementById('acc_n').value;
-      // }
+      if(document.getElementById('acc_y').checked){
+        var acc_value = document.getElementById('acc_y').value;
+      }
+      else if(document.getElementById('acc_n').checked){
+        acc_value = document.getElementById('acc_n').value;
+      }
 
       var info = document.getElementById("accomodation_info").value;
 
@@ -474,7 +474,7 @@
       else
         ef = "no";
 
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, /*gender: gender_value,*/ phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, /*accomodation_needed: acc_value,*/ accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g, z_lt_doesnt_exist: ea, z_robo_race: eb, z_trail_y_tronix: ec, z_code_quest: ed, z_algo_warriors: ee, z_ideat_build: ef};
+      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation: acc_value, accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g, z_lt_doesnt_exist: ea, z_robo_race: eb, z_trail_y_tronix: ec, z_code_quest: ed, z_algo_warriors: ee, z_ideat_build: ef};
       //console.log(obj.reg_num)
      r.child(obj.reg_num).set(obj, onComplete);
       
