@@ -280,29 +280,11 @@
   <script type="text/javascript" src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCVBkjljkPepo6br1wS7_DKDx0llm_7Rqc",
-      authDomain: "fir-1-a96e9.firebaseapp.com",
-      databaseURL: "https://fir-1-a96e9.firebaseio.com",
-      projectId: "fir-1-a96e9",
-      storageBucket: "fir-1-a96e9.appspot.com",
-      messagingSenderId: "877166335783"
-    };
-    firebase.initializeApp(config);
+   //Add firebase database linking code here
     //firebase.database().ref().push({"k": "v"})
   </script>
   <script>
   /**********************************************************************/
-  //  FORM VALIDATION
-  // function myFunction(){
-  //   var reg, reg_num_err;
-  //
-  //   reg = document.getElementById("reg_num").value;
-  //   window.alert(reg_num);
-  //   if(reg > 110115999 || reg < 110115001)
-  //     reg_num_err = "Invalid registration number";
-  //   document.getElementById("span_reg").innerHTML=reg_num_err;
-  // }
   //FOR DROPDOWN
     var x, i, j, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/
@@ -474,8 +456,34 @@
       else
         ef = "no";
 
-      var obj = {reg_num: reg_num, fname: fname, lname: lname, gender: gender_value, phone_num: phone_num, email: email, branch: branch, cname: cname, city: city, accomodation: acc_value, accomodation_info: info, w_segway: a, w_flappy_bird: b, w_r2d2: c, w_chrome_dino: d, w_stock_market: e, w_workshop1: f, w_workshop2: g, z_lt_doesnt_exist: ea, z_robo_race: eb, z_trail_y_tronix: ec, z_code_quest: ed, z_algo_warriors: ee, z_ideat_build: ef};
-      //console.log(obj.reg_num)
+      var obj = {
+          reg_num: reg_num,
+          fname: fname,
+          lname: lname,
+          gender: (gender_value) ? gender_value : 0,
+          phone_num: phone_num,
+          email: email,
+          branch: branch,
+          cname: cname,
+          city: city,
+          accomodation: (acc_value) ? acc_value : 0,
+          accomodation_info: info,
+          w_segway: a,
+          w_flappy_bird: b,
+          w_r2d2: c,
+          w_chrome_dino: d,
+          w_stock_market: e,
+          w_workshop1: f,
+          w_workshop2: g,
+          z_lt_doesnt_exist: ea,
+          z_robo_race: eb,
+          z_trail_y_tronix: ec,
+          z_code_quest: ed,
+          z_algo_warriors: ee,
+          z_ideat_build: ef
+      };
+
+
      r.child(obj.reg_num).set(obj, onComplete);
       
       //root.push(obj); 
