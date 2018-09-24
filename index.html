@@ -106,6 +106,7 @@
             <option value="3"></option>
           </select><br>
         </div>
+        <br>
         <label>Workshops</label><br>
                 <table id="checkbox_table">
                   <tr>
@@ -117,9 +118,25 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Segway:General Robotics<br><br>
-                      </label>
+                        Segway:General Robotics
+                        </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="segway_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
                       <td>
                         <label class="checkbox_container">
                         <input type="checkbox" class="checkbox" value="yes" id="flappy_bird">
@@ -128,10 +145,23 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Flappy Bird:Android App <br>
-                        Development<br>
+                        Flappy Bird:Android App Development
                         </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="flappy_bird_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                       <td>
@@ -142,9 +172,25 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        R2D2:Voice Controlled <br> Robotics<br>
+                        R2D2:Voice Controlled Robotics
                       </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="r2d2_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
                       <td>
                         <label class="checkbox_container">
                         <input type="checkbox" class="checkbox" value="yes" id="chrome_dino">
@@ -153,9 +199,23 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Chrome Dino:Computer Vision Based Control<br>
+                        Chrome Dino:Computer Vision Based Control
                         </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="chrome_dino_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                       <td>
@@ -169,6 +229,22 @@
                         Stock Market Prediction using Machine Learning
                         </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="stock_market_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
                       <td>
                         <label class="checkbox_container">
                         <input type="checkbox" class="checkbox" value="yes" id="workshop1">
@@ -180,6 +256,20 @@
                         Workshop 1
                         </label>
                       </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="workshop1_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
                   </tr>
                   <tr>
                       <td>
@@ -194,8 +284,22 @@
                         </label>
                       </td>
                     </tr>
+                     <tr>
+                    <td></td>
+                    <td>
+                      <div class="dropdown">
+                        <select id="workshop2_slot_info">
+                          <option value="0">Select Slot</option>
+                          <option value="1">Slot 1</option>
+                          <option value="2">Slot 2</option>
+                          <option value="3">Slot 3</option>
+                          <option value="4">Slot 4</option>
+                        </select><br>
+                      </div>
+                    </td>
+                  </tr>
                 </table>
-
+        <br>
         <label>Events</label><br>
         <table>
           <tr>
@@ -273,15 +377,15 @@
         </table>
 
         <br>
-        <button id="btn" type="submit">SUBMIT</button>
+        <button id="btn" type="button">SUBMIT</button>
       </form>
     <div class="footer"></div>
   </body>
   <script type="text/javascript" src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
-   //Add firebase database linking code here
-    //firebase.database().ref().push({"k": "v"})
+    //Add firebase database linking code here
+    //firebase.database().ref().push ({"k": "v"})
   </script>
   <script>
   /**********************************************************************/
@@ -390,43 +494,57 @@
         gender_value = document.getElementById('female').value;
       }
 
-      // var acc = document.getElementById('acc').value;
+      //Accomodation
       if(document.getElementById('acc_y').checked){
         var acc_value = document.getElementById('acc_y').value;
       }
       else if(document.getElementById('acc_n').checked){
         acc_value = document.getElementById('acc_n').value;
       }
-
+      //Accomodation info from dropdown menu
       var info = document.getElementById("accomodation_info").value;
 
       //WORKSHOPS
-      if(document.getElementById("segway").checked)
+      if(document.getElementById("segway").checked){
         var a = document.getElementById("segway").value;
+        var segway_slot_info = document.getElementById("segway_slot_info").value; 
+      }
       else 
         a = "no";
-      if(document.getElementById("flappy_bird").checked)
+      if(document.getElementById("flappy_bird").checked){
         var b = document.getElementById("flappy_bird").value;
+        var flappy_bird_slot_info = document.getElementById("flappy_bird_slot_info").value;
+      }
       else
         b = "no"; 
-      if(document.getElementById("r2d2").checked)
+      if(document.getElementById("r2d2").checked){
         var c = document.getElementById("r2d2").value;
+        var r2d2_slot_info = document.getElementById("r2d2_slot_info").value;
+      }
       else 
         c = "no";
-      if(document.getElementById("chrome_dino").checked)
+      if(document.getElementById("chrome_dino").checked){
         var d = document.getElementById("chrome_dino").value;
+        var chrome_dino_slot_info = document.getElementById("chrome_dino_slot_info").value;
+      }
       else 
         d = "no";
-      if(document.getElementById("stock_market").checked)
+      if(document.getElementById("stock_market").checked){
         var e = document.getElementById("stock_market").value;
+        var stock_market_slot_info = document.getElementById("stock_market_slot_info").value;
+      }
       else
         e = "no";
-      if(document.getElementById("workshop1").checked)
+      if(document.getElementById("workshop1").checked){
         var f = document.getElementById("workshop1").value;
+        var workshop1_slot_info = document.getElementById("workshop1_slot_info").value;
+      }
       else
         f = "no";
-      if(document.getElementById("workshop2").checked)
+      if(document.getElementById("workshop2").checked){
         var g = document.getElementById("workshop2").value;
+        var workshop2_slot_info = document.getElementById("workshop2_slot_info").value;
+      }
       else 
         g = "no";
 
@@ -458,23 +576,32 @@
 
       var obj = {
           reg_num: reg_num,
-          fname: fname,
-          lname: lname,
+          first_name: fname,
+          last_name: lname,
           gender: (gender_value) ? gender_value : 0,
           phone_num: phone_num,
           email: email,
           branch: branch,
-          cname: cname,
+          college: cname,
           city: city,
           accomodation: (acc_value) ? acc_value : 0,
           accomodation_info: info,
-          w_segway: a,
-          w_flappy_bird: b,
-          w_r2d2: c,
-          w_chrome_dino: d,
-          w_stock_market: e,
-          w_workshop1: f,
-          w_workshop2: g,
+
+          workshop_segway: a,
+          workshop_segway_slot: (segway_slot_info) ? segway_slot_info : 0,
+          workshop_flappy_bird: b,
+          workshop_flappy_bird_slot: (flappy_bird_slot_info) ? flappy_bird_slot_info : 0,
+          workshop_r2d2: c,
+          workshop_r2d2_slot: (r2d2_slot_info) ? r2d2_slot_info : 0,
+          workshop_chrome_dino: d,
+          workshop_chrome_dino_slot: (chrome_dino_slot_info) ? chrome_dino_slot_info : 0,
+          workshop_stock_market: e,
+          workshop_stock_market_slot: (stock_market_slot_info) ? stock_market_slot_info : 0,
+          workshop_workshop1: f,
+          workshop_workshop1_slot: (workshop1_slot_info) ? workshop1_slot_info : 0,
+          workshop_workshop2: g,
+          workshop_workshop2_slot: (workshop2_slot_info) ? workshop2_slot_info : 0,
+
           z_lt_doesnt_exist: ea,
           z_robo_race: eb,
           z_trail_y_tronix: ec,
