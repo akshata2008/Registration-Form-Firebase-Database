@@ -118,7 +118,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Segway:General Robotics
+                        <span class="cc_text">Segway:General Robotics</span>
                         </label>
                       </td>
                   </tr>
@@ -145,7 +145,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Flappy Bird:Android App Development
+                        <span class="cc_text">Flappy Bird:Android App Development</span>
                         </label>
                       </td>
                   </tr>
@@ -172,7 +172,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        R2D2:Voice Controlled Robotics
+                        <span class="cc_text">R2D2:Voice Controlled Robotics</span>
                       </label>
                       </td>
                   </tr>
@@ -199,7 +199,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Chrome Dino:Computer Vision Based Control
+                        <span class="cc_text">Chrome Dino:Computer Vision Based Control</span>
                         </label>
                       </td>
                   </tr>
@@ -226,7 +226,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Stock Market Prediction using Machine Learning
+                        <span class="cc_text">Stock Market Prediction using Machine Learning</span>
                         </label>
                       </td>
                   </tr>
@@ -253,7 +253,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Workshop 1
+                        <span class="cc_text">Workshop 1</span>
                         </label>
                       </td>
                   </tr>
@@ -280,7 +280,7 @@
                       </td>
                       <td>
                         <label class="checkbox_container">
-                        Workshop 2
+                        <span class="cc_text">Workshop 2</span>
                         </label>
                       </td>
                     </tr>
@@ -311,7 +311,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Lt Doesn't Exist
+                <span class="cc_text">Lt Doesn't Exist</span>
               </label>
               </td>
               <td>
@@ -322,7 +322,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Robo Race
+                <span class="cc_text">Robo Race</span>
                 </label>
               </td>
           </tr>
@@ -335,7 +335,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Trail By Tronix
+                <span class="cc_text">Trail By Tronix</span>
                 </label>
               </td>
               <td>
@@ -346,7 +346,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Code Quest
+                <span class="cc_text">Code Quest</span>
                 </label>
               </td>
           </tr>
@@ -359,7 +359,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Algo Warriors
+                <span class="cc_text">Algo Warriors</span>
               </label>
               </td>
               <td>
@@ -370,7 +370,7 @@
               </td>
               <td>
                 <label class="checkbox_container">
-                Ideate & Build
+                <span class="cc_text">Ideate & Build</span>
                 </label>
               </td>
           </tr>
@@ -384,11 +384,29 @@
   <script type="text/javascript" src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
-    //Add firebase database linking code here
+    var config = {
+      apiKey: "AIzaSyCVBkjljkPepo6br1wS7_DKDx0llm_7Rqc",
+      authDomain: "fir-1-a96e9.firebaseapp.com",
+      databaseURL: "https://fir-1-a96e9.firebaseio.com",
+      projectId: "fir-1-a96e9",
+      storageBucket: "fir-1-a96e9.appspot.com",
+      messagingSenderId: "877166335783"
+    };
+    firebase.initializeApp(config);
     //firebase.database().ref().push ({"k": "v"})
   </script>
   <script>
   /**********************************************************************/
+  //  FORM VALIDATION
+  // function myFunction(){
+  //   var reg, reg_num_err;
+  //
+  //   reg = document.getElementById("reg_num").value;
+  //   window.alert(reg_num);
+  //   if(reg > 110115999 || reg < 110115001)
+  //     reg_num_err = "Invalid registration number";
+  //   document.getElementById("span_reg").innerHTML=reg_num_err;
+  // }
   //FOR DROPDOWN
     var x, i, j, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/
@@ -464,6 +482,7 @@
           document.addEventListener("click", closeAllSelect);
   </script>
   <script>
+    $("#dropdown").insertAfter("label.checkbox_container");
     //firebase
     var database = firebase.database();
     var r = database.ref('registrations');// create or refer
