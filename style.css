@@ -3,7 +3,7 @@
 }
 @font-face{
   font-family: Lato;
-  src: url(/Lato/fonts/Lato-Regular.ttf);
+  src: url(Lato/fonts/Lato-Regular.ttf); /* C:/Users/User/Desktop/forms/Lato/fonts/Lato-Regular.ttf*/
 }
 @font-face{
   font-family: Amaranth-Regular;
@@ -48,7 +48,8 @@ label{
     letter-spacing: 0px;
     font-weight:500;
     font-family:Lato;
-}
+/*    border: 1px solid lime;
+*/}
 input{
   font-family:Lato;
   font-size: 16px;
@@ -83,13 +84,15 @@ table{
 td{
   /*text-align:left;*/
   color: #e55039;
-  padding: 0;
+  padding: 0px;
   vertical-align: top;
-  /*border: 1px solid blue;*/
-}
+
+/*  border: 1px solid blue;
+*/}
 /*CHECKBOX PROPERTIES*/
 .checkbox_container{/* the checkbox text*/
     position: relative;
+    top:20px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -100,6 +103,12 @@ td{
     font-size: 16px;
     padding-left: 8px;
 }
+
+.checkbox_container > .cc_text{
+  position:relative;
+  top:-2px;
+}
+
 /*hide the original checkbox*/
 .checkbox_container input {
     opacity: 0;
@@ -107,7 +116,7 @@ td{
 }
 .checkmark{  /*span tag acting like the new checkbox*/
     position: absolute;
-    top: 0px;
+    top: -5px;
     /*left: 5px;*/
     height: 15px;
     width: 15px;
@@ -291,8 +300,8 @@ td{
   font-family: Lato;
   font-size: 15px;
 
-  margin-top: 0px;
-  margin-bottom: 15px;
+  margin-bottom:5px;
+  border:0;
   width: 50%;
   outline: none;
   position:relative;
